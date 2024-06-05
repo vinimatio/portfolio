@@ -59,6 +59,20 @@
       "github": true
     }
   ],
+
+  "education": [
+    {
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "period": "Janeiro 2024 - Junho 2026",
+      "institution": "Universidade Católica do Salvador"
+    },
+    {
+      "course": "Bacharelado em Direito",
+      "period": "Junho 2012 - Junho 2019",
+      "institution": "UNINASSAU"
+    }
+  ],
+
   "professionalExperience": [
     {
       "name": "",
