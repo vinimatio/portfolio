@@ -13,7 +13,7 @@
 body {
     color: white;
     background: linear-gradient(-45deg, #e97fad, #000, #1C1A81);
-    background-size: 150vw 200vh;
+    background-size: 150vw 250vh;
     background-repeat: no-repeat;
     animation: headergradient 8s ease infinite alternate;
     min-width: 290px;
