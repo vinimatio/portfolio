@@ -51,7 +51,11 @@ function updatePortfolio(profileData) {
 
 function updateExperience(profileData) {
     const experiences = document.getElementById('experiences');
-    console.log(profileData.professionalExperience);
+    if (profileData.professionalExperience[0].name) {
+        console.log('ta lá');
+    } else {
+        console.log('não tá');
+    }
     experiences.innerHTML = profileData.professionalExperience.map(exp => `
     <li>
         <h3 class="title">${exp.name}</h3>
