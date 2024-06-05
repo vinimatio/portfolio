@@ -1,0 +1,301 @@
+@import url('global.css');
+
+header {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    position: relative;
+}
+
+header::after {
+    content: '';
+    background-image: url('../images/header/points.svg');
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+header .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+header .title {
+    text-align: center;
+    font-family: 'Neue Machina';
+    font-size: 1.5rem;
+}
+
+header .infoContainer {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+header .infoContainer p {
+    margin: .5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+header .infoContainer p::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+header .infoContainer .job::before {
+    background-image: url('../images/header/job.svg');
+}
+
+header .infoContainer .location::before {
+    background-image: url('../images/header/location.svg');
+}
+
+header .infoContainer .zap::before {
+    background-image: url('../images/header/zap.svg');
+}
+
+header .infoContainer .mail::before {
+    background-image: url('../images/header/mail.svg');
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        display: grid;
+        grid:
+            "photo . title"
+            "photo . info";
+    }
+
+    header .photo {
+        grid-area: photo;
+        margin: auto;
+    }
+
+    header .title {
+        grid-area: title;
+        text-align: start;
+    }
+
+    header .infoContainer {
+        grid-area: info;
+    }
+
+}
+
+.acordeon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    transition: 0.25s ease;
+}
+
+.acordeon.open,.acordeon:hover {
+    background-color: #55569e;
+    border-color: #55569e;
+}
+
+.acordeon .trigger {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acordeon .trigger h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.acordeon .trigger:hover {
+    cursor: pointer;
+}
+
+.acordeon .trigger::after {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1rem;
+    background-image: url('../images/acento.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: center;
+    transition: .25s;
+}
+
+.acordeon.open .trigger::after {
+    transform: rotate(180deg);
+}
+
+.acordeon .acordeonContent {
+    display: none;
+}
+
+.acordeon.open .acordeonContent {
+    display: block;
+    padding: 0 2rem 1rem 2rem;
+}
+
+.languages {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.languages li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 1rem;
+    font-weight: 700;
+}
+
+.languages li::before {
+    display: inline-block;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background: url('../images/v.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.portfolio {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+.portfolio li {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+
+.portfolio li .title {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: .5rem;
+}
+
+.portfolio li .title.github::before {
+    display: inline-block;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background: url('../images/githubicon.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+    min-width: 1rem;
+}
+
+.experience {
+    display: flex;
+    flex-flow: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.experience li {
+    margin-bottom: 1rem;
+}
+
+.experience li .period {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.experience li .period::before {
+    display: inline-block;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background: url('../images/date.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+    min-width: 1rem;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.skills .tools ul {
+    display: grid;
+    grid-template-columns: 80px 80px;
+    gap: 1rem 1rem;
+    place-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.skills .tools img {
+    max-width: 50px;
+    margin: 0 .5rem;
+}
+
+.skills .personal ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.skills .personal ul li {
+    margin-left: 2rem;
+    padding: .5rem;
+}
+
+.skills section h3 {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .skills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
