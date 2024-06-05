@@ -52,16 +52,17 @@ function updatePortfolio(profileData) {
 function updateExperience(profileData) {
     const experiences = document.getElementById('experiences');
     if (profileData.professionalExperience[0].name) {
-        console.log('ta lá');
-    } else {
-        console.log('não tá');
-    }
-    experiences.innerHTML = profileData.professionalExperience.map(exp => `
+        experiences.innerHTML = profileData.professionalExperience.map(exp => `
     <li>
         <h3 class="title">${exp.name}</h3>
         <span class="period">${exp.period}</span>
         <p>${exp.description}</p>
     </li>`).join('')
+    } else {
+        console.log('não tá');
+        console.log(profileData.professionalExperience[0].name);
+    }
+    
 }
 
 (async () => {
