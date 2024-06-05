@@ -49,6 +49,8 @@ function updatePortfolio(profileData) {
     </li>`).join('');
 }
 
+
+
 function updateExperience(profileData) {
     const experiences = document.getElementById('experiences');
     if (profileData.professionalExperience[0].name) {
@@ -59,8 +61,8 @@ function updateExperience(profileData) {
         <p>${exp.description}</p>
     </li>`).join('')
     } else {
-        console.log('não tá');
-        console.log(profileData.professionalExperience[0].name);
+        const acordeonFather = experiences.closest('.acordeon');
+        acordeonFather.remove();
     }
     
 }
