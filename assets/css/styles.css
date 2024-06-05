@@ -305,3 +305,16 @@ header .infoContainer .mail::before {
         border-color: #55569e;
     }
 }
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+}
+
+footer img {
+    max-width: 80px;
+}
