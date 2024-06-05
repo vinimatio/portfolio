@@ -105,7 +105,7 @@ header .infoContainer .mail::before {
     transition: 0.25s ease;
 }
 
-.acordeon.open,.acordeon:hover {
+.acordeon.open {
     background-color: #55569e;
     border-color: #55569e;
 }
@@ -298,5 +298,10 @@ header .infoContainer .mail::before {
     .skills {
         display: grid;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .acordeon:hover {
+        background-color: #55569e;
+        border-color: #55569e;
     }
 }
