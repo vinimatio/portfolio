@@ -271,6 +271,7 @@ header .infoContainer .mail::before {
 }
 
 .skills .tools img {
+    max-height: 50px;
     max-width: 50px;
     margin: 0 .5rem;
 }
