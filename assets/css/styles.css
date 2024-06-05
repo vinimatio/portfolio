@@ -216,7 +216,7 @@ header .infoContainer .mail::before {
     content: '';
     width: 1rem;
     height: 1rem;
-    background: url('../images/githubicon.svg');
+    background: url('../images/techicons/githubicon.svg');
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: .5rem;
