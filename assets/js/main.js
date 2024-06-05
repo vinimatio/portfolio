@@ -49,7 +49,16 @@ function updatePortfolio(profileData) {
     </li>`).join('');
 }
 
-
+function updateEducation(profileData) {
+    const educations = document.getElementById('education');
+    educations.innerHTML = profileData.education.map(education => `
+    <li>
+            <h3 class="title">${education.course}</h3>
+            <span class="period">${education.period}</span>
+            <p>${education.institution}</p>
+    </li>
+    `).join('')
+}
 
 function updateExperience(profileData) {
     const experiences = document.getElementById('experiences');
@@ -64,7 +73,7 @@ function updateExperience(profileData) {
         const acordeonFather = experiences.closest('.acordeon');
         acordeonFather.remove();
     }
-    
+
 }
 
 (async () => {
@@ -75,4 +84,5 @@ function updateExperience(profileData) {
     updateLanguages(profileData);
     updatePortfolio(profileData);
     updateExperience(profileData);
+    updateEducation(profileData);
 })()
